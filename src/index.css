@@ -112,3 +112,9 @@ input {
   width: 100%;
   overflow: hidden;
 }
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
