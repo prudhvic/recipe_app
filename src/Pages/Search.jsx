@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 const Search = () => {
   let [recipes, setRecipes] = useState([]);
   let { name } = useParams();
@@ -23,11 +23,11 @@ const Search = () => {
     <div>
       <div className="container-recipes grid-items">
         {recipes.map((recipe) => (
-          <div key={recipe.id}>
+          <Link to={`/recipes/${recipe.id}`} key={recipe.id}>
             <h3>{recipe.title}</h3>
             <div className="overlay"></div>
             <img src={recipe.image} />
-          </div>
+          </Link>
         ))}
       </div>
     </div>

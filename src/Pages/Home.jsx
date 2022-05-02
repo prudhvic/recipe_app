@@ -6,7 +6,6 @@ import VegRecipe from "../components/VegRecipe";
 const Home = () => {
   return (
     <div>
-      <Tab />
       <TrendRecipe />
       <VegRecipe />
     </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import React from "react";
+import { Link } from "react-router-dom";
 const TrendRecipe = () => {
   let [vegRecipes, setVegRecipes] = useState([]);
   let fetchRecipe = async () => {
@@ -28,11 +29,11 @@ const TrendRecipe = () => {
       <h2>Trending recipes</h2>
       <div className="container-recipes">
         {vegRecipes.map((recipe) => (
-          <div key={recipe.id}>
+          <Link to={`/recipes/${recipe.id}`} key={recipe.id}>
             <h3>{recipe.title}</h3>
             <div className="overlay"></div>
             <img src={recipe.image} />
-          </div>
+          </Link>
         ))}
       </div>
     </React.Fragment>
